@@ -36,7 +36,11 @@ Usage
 
 To create a typewriter effect for an HTML element, call the **Typify** function with the required CSS selector and configuration options.
 
+Place the below code in your html file
+
     <h1 id="typify-text"></h1>
+    
+Place the below code in your javascript file
 
     const typingText = Typify('#typify-text', {
       text: ['Hello!', 'Welcome to Typify Library!', 'Enjoy the typing effect!'],
@@ -102,4 +106,4 @@ The following example demonstrates how to use typify.js as an ESModule.
 
 License
 --------
-[MIT]()
+[MIT](./LICENSE)
