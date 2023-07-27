@@ -30,7 +30,7 @@ To use typify.js as an ESModule, install it via npm:
 
 ### Download
 
-To setup typify.js locally: [download](https://unpkg.com/typify.js@1.0.0/dist/typify.min.js)
+To setup typify.js locally: [visit](https://github.com/devsk18/typify.js)
 
 Usage
 -----
@@ -107,7 +107,7 @@ The following example demonstrates how to use typify.js as an ESModule.
 
 License
 --------
-[MIT](https://devsk18.github.io/typify.js/LICENSE)
+[MIT](https://github.com/devsk18/typify.js/blob/main/LICENSE)
 
 Support
 --------
