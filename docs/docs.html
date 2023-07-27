@@ -3,10 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>typify.js</title>
+
+    <title>typify.js | Auto Typing Animation Library</title>
+    <meta name="description" content="typify.js is a powerful and lightweight auto typing animation library that makes it easy to create dynamic text animations on your website. Enhance your user experience with typewriter-like effects.">
+    <meta name="keywords" content="Typify.js, typify, typify.js, typify js, auto typing animation, typewriter effect, JavaScript library, text animation, typewriting, dynamic text effects">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/img/favicon/site.webmanifest">
 
     <link rel="stylesheet" href="./assets/css/style.css">
+
 </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B62FZPV1Q8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B62FZPV1Q8');
+</script>
+
 <body>
     <header>
         <nav>
@@ -33,30 +53,28 @@
 
     <section id="docs">
         <div class="wrap">
-            <h1 style="font-size: 2rem;">typify.js <span style="font-size: 1.2rem;"> - Auto Typing Effect Utility Library</span></h1>
+            <h1 style="font-size: 2rem;">typify.js <span style="font-size: 1.2rem;"> - Auto Typing Animation Library</span></h1>
             <p>
-              <strong>typify.js</strong> is a lightweight utility function that creates an auto-typing effect with a cursor for an HTML
-              element.
-              It can be used via CDN and npm.
+              <strong>typify.js</strong> is a powerful and lightweight auto typing animation library that makes it easy to create dynamic text animations on your website. Enhance your user experience with typewriter-like effects.
             </p>
             
             <h2>Installation</h2>
             <h3>Using CDN</h3>
             <p>
-              To use Typify directly in the browser, include the following script tag in the <code>&lt;head&gt;</code> or
+              To use typify.js directly in the browser, include the following script tag in the <code>&lt;head&gt;</code> or
               <code>&lt;body&gt;</code> section of your HTML file:
             </p>
             <pre><code>&lt;script src="https://unpkg.com/typify.js@1.0.0/dist/typify.min.js"&gt;&lt;/script&gt;</code></pre>
             
             <h3>Using npm</h3>
             <p>
-              To use Typify as an ESModule, install it via npm:
+              To use typify.js as an ESModule, install it via npm:
             </p>
             <pre><code>npm install typify.js</code></pre>
             
-            <h3>Download File</h3>
+            <h3>Download</h3>
             <p>
-              To use Typify locally: <a href="./dist/typify.min.js" download>download</a>
+              To setup typify.js locally: <a href="./dist/typify.min.js" download>download</a>
             </p>
             
             <h2>Usage</h2>
@@ -92,9 +110,9 @@
     <section id="examples">
         <div class="wrap">
             <h2><u>Examples</u></h2>
-  <h3>Typify in browser</h3>
+  <h3>Using in browser</h3>
   <p>
-    The following example demonstrates how to use Typify in browser.
+    The following example demonstrates how to use typify.js in browser.
   </p>
   <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -118,11 +136,11 @@
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
   
-  <h3>Typify as an ESModule</h3>
+  <h3>Using as a ESModule</h3>
   <p>
-    The following example demonstrates how to use Typify as an ESModule.
+    The following example demonstrates how to use typify.js as an ESModule.
   </p>
-  <pre><code>const Typify = require('typify');
+  <pre><code>const Typify = require('typify.js');
 
 const typingText = Typify('#typify-text', {
   text: ['Hello!', 'Welcome to Typify Library!', 'Enjoy the typing effect!'],
@@ -134,7 +152,23 @@ const typingText = Typify('#typify-text', {
         </div>
     </section>
 
-    <script src="./src/typify.js"></script>
+    <section id="licence">
+      <div class="wrap">
+          <h2><u>Licence</u></h2>
+          <p><a href="https://github.com/devsk18/typify.js/blob/main/LICENSE">MIT</a></p>
+      </div>
+    </section>
+
+    <section id="support">
+      <div class="wrap">
+          <h2><u>Support</u></h2>
+          <a href="https://www.buymeacoffee.com/samkthampan" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+      </div>
+    </section>
+
+
+
+    <script src="./dist/typify.min.js"></script>
     <script>
 
         Typify('#typify-text', {
@@ -147,5 +181,6 @@ const typingText = Typify('#typify-text', {
 
 
     </script>
+
 </body>
 </html>

@@ -1,16 +1,17 @@
 
-[![](./assets/img/logo.png)](/)
+[![](https://devsk18.github.io/typify.js/assets/img/logo.png)](/)
 
 
-typify.js \- Auto Typing Effect Utility Library
+typify.js \- Auto Typing Animation Library
 ===============================================
 
-**typify.js** is a lightweight utility function that creates an auto-typing effect with a cursor for an HTML element. It can be used via CDN and npm.
+**typify.js** is a powerful and lightweight auto typing animation library that makes it easy to create dynamic text animations on your website. Enhance your user experience with typewriter-like effects.
 
 Demo
 ------------
-[![](./assets/img/demo.gif)](/)
-Visit this [page](https://devsk18.github.io/typify.js) to see a demo.
+[![](https://devsk18.github.io/typify.js/assets/img/demo.gif)](/)
+
+Visit this [page](https://devsk18.github.io/typify.js) to see a live demo.
 
 Installation
 ------------
@@ -29,7 +30,7 @@ To use typify.js as an ESModule, install it via npm:
 
 ### Download
 
-To setup typify.js locally: [download](./dist/typify.min.js)
+To setup typify.js locally: [download](https://unpkg.com/typify.js@1.0.0/dist/typify.min.js)
 
 Usage
 -----
@@ -106,4 +107,8 @@ The following example demonstrates how to use typify.js as an ESModule.
 
 License
 --------
-[MIT](./LICENSE)
+[MIT](https://devsk18.github.io/typify.js/LICENSE)
+
+Support
+--------
+[Buy me a coffee](https://www.buymeacoffee.com/samkthampan)
