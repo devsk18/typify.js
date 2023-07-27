@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>typify.js</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/">
+                    <img src="./assets/img/logo.png" alt="">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="#docs">Docs</a>
+                <a href="#examples">Examples</a>
+                <a href="./dist/typify.min.js" download>Download</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="wrap">
+            <div class="container">
+                <div id="typify-text"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="docs">
+        <div class="wrap">
+            <h1 style="font-size: 2rem;">typify.js <span style="font-size: 1.2rem;"> - Auto Typing Effect Utility Library</span></h1>
+            <p>
+              <strong>typify.js</strong> is a lightweight utility function that creates an auto-typing effect with a cursor for an HTML
+              element.
+              It can be used via CDN and npm.
+            </p>
+            
+            <h2>Installation</h2>
+            <h3>Using CDN</h3>
+            <p>
+              To use Typify directly in the browser, include the following script tag in the <code>&lt;head&gt;</code> or
+              <code>&lt;body&gt;</code> section of your HTML file:
+            </p>
+            <pre><code>&lt;script src="https://unpkg.com/typify.js@1.0.0/dist/typify.min.js"&gt;&lt;/script&gt;</code></pre>
+            
+            <h3>Using npm</h3>
+            <p>
+              To use Typify as an ESModule, install it via npm:
+            </p>
+            <pre><code>npm install typify.js</code></pre>
+            
+            <h3>Download File</h3>
+            <p>
+              To use Typify locally: <a href="./dist/typify.min.js" download>download</a>
+            </p>
+            
+            <h2>Usage</h2>
+            <p>
+              To create a typewriter effect for an HTML element, call the <strong>Typify</strong> function with the required
+              CSS selector and configuration options.
+            </p>
+  <pre><code>&lt;h1 id="typify-text"&gt;&lt;/h1&gt;</code></pre>
+  <pre><code>const typingText = Typify('#typify-text', {
+  text: ['Hello!', 'Welcome to Typify Library!', 'Enjoy the typing effect!'],
+  delay: 100,
+  loop: true,
+  cursor: true,
+  stringDelay: 1000 
+});</code></pre>
+  
+  <h2>Options</h2>
+  <p>
+    The <strong>Typify</strong> function accepts the following options as the second argument:
+  </p>
+  <ul>
+    <li><strong>text</strong> (required): An array of strings to be typed and erased in sequence.</li>
+    <li><strong>delay</strong> (optional): The delay in milliseconds between typing each character (default: 100ms).</li>
+    <li><strong>loop</strong> (optional): Whether to loop through the 'text' array continuously or stop after one iteration (default: true).</li>
+    <li><strong>cursor</strong> (optional): Whether to display the cursor (default: true).</li>
+    <li><strong>stringDelay</strong> (optional): Time in milliseconds to pause before typing each string (default: 1000ms).</li>
+  </ul>
+  
+  
+          </div>
+    </section>
+
+    <section id="examples">
+        <div class="wrap">
+            <h2><u>Examples</u></h2>
+  <h3>Typify in browser</h3>
+  <p>
+    The following example demonstrates how to use Typify in browser.
+  </p>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Typify Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1 id="typify-text"&gt;&lt;/h1&gt;
+  &lt;script src="./typify.min.js"&gt;&lt;/script&gt;
+  &lt;script&gt;
+    const typingText = Typify('#typify-text', {
+      text: ['Hello!', 'Welcome to Typify Library!', 'Enjoy the typing effect!'],
+      delay: 100,
+      loop: true,
+      cursor: true,
+      stringDelay: 1000
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  
+  <h3>Typify as an ESModule</h3>
+  <p>
+    The following example demonstrates how to use Typify as an ESModule.
+  </p>
+  <pre><code>const Typify = require('typify');
+
+const typingText = Typify('#typify-text', {
+  text: ['Hello!', 'Welcome to Typify Library!', 'Enjoy the typing effect!'],
+  delay: 100,
+  loop: true,
+  cursor: true,
+  stringDelay: 1000
+});</code></pre>
+        </div>
+    </section>
+
+    <script src="./src/typify.js"></script>
+    <script>
+
+        Typify('#typify-text', {
+            text: ['Hello Folks!', 'Welcome to typify.js Library!', 'Enjoy the typing effect!'],
+            delay: 100, // Time delay between each character (in milliseconds)
+            stringDelay: 1000, // Time delay between each string (in milliseconds)
+            loop: true, // Set to false if you don't want the text to loop
+            cursor: true, // Set cursor option to true to show the cursor
+        });
+
+
+    </script>
+</body>
+</html>

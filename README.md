@@ -1,5 +1,5 @@
 
-[![](./assets/img/logo2-croped.png)](/)
+[![](./assets/img/logo.png)](/)
 
 
 typify.js \- Auto Typing Effect Utility Library
@@ -10,7 +10,7 @@ typify.js \- Auto Typing Effect Utility Library
 Demo
 ------------
 [![](./assets/img/demo.gif)](/)
-Visit this [page]() to see a demo.
+Visit this [page](https://devsk18.github.io/typify.js) to see a demo.
 
 Installation
 ------------

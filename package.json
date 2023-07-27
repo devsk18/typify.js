@@ -1,0 +1,37 @@
+{
+  "name": "typify.js",
+  "version": "1.0.0",
+  "description": "typify.js is a lightweight utility function that creates an auto-typing effect",
+  "author": "Sam K Thampan (https://devsk18.github.io/samkthampan)",
+  "license": "MIT",
+  
+  "homepage": "",
+  "repository": "",
+
+  "type": "module",
+
+  "source": "./src/typify.js",
+
+  "exports": {
+    "require": "./dist/typify.min.js",
+    "import": "./dist/typify.min.js"
+  }, 
+
+  "main": "./dist/typify.min.js",
+  "module": "./dist/typify.min.js",
+  "unpkg": "./dist/typify.min.js",
+
+  "files": [ "dist" ],
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+  "keywords": [
+    "typify",
+    "typify.js",
+    "typing animation",
+    "typing effect"
+  ]
+
+}
