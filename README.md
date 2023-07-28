@@ -20,7 +20,7 @@ Installation
 
 To use typify.js directly in the browser, include the following script tag in the `<head>` or `<body>` section of your HTML file:
 
-    <script src="https://unpkg.com/typify.js@1.0.0/dist/typify.min.js"></script>
+    <script src="https://unpkg.com/typify.js@1.0.3/dist/typify.min.js"></script>
 
 ### Using npm
 
