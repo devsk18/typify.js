@@ -22,13 +22,13 @@ To use typify.js directly in the browser, include the following script tag in th
 
     <script src="https://unpkg.com/typify.js@1.0.3/dist/typify.min.js"></script>
 
-<!-->
+<!--
 ### Using npm
 
 To use typify.js as an ESModule, install it via npm:
 
     npm install typify.js
-<-->
+-->
 
 ### Download
 
@@ -93,7 +93,7 @@ The following example demonstrates how to use typify.js in browser.
     </body>
     </html>
 
-<!-->
+<!--
 ### Using as a ESModule
 
 The following example demonstrates how to use typify.js as an ESModule.
@@ -108,7 +108,7 @@ The following example demonstrates how to use typify.js as an ESModule.
       stringDelay: 1000
     });
 
-<-->
+-->
 License
 --------
 [MIT](https://github.com/devsk18/typify.js/blob/main/LICENSE)
