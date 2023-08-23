@@ -1,37 +1,25 @@
 {
   "name": "typify.js",
-  "version": "1.0.5",
+  "version": "1.0.4",
   "description": "typify.js is a lightweight utility function that creates an auto-typing effect for your text",
   "author": "Sam K Thampan (https://devsk18.github.io/samkthampan)",
-  "homepage": "https://devsk18.github.io/typify.js/",
   "license": "MIT",
+  "homepage": "https://devsk18.github.io/typify.js/",
+  "repository": "https://github.com/devsk18/typify.js.git",
+  "type": "module",
+  "source": "./src/typify.js",
+  "exports": {
+    "require": "./dist/typify.min.js",
+    "import": "./dist/typify.min.js"
+  },
   "main": "./dist/typify.min.js",
-  "module": "src/Typify.jsx",
+  "module": "./dist/typify.min.js",
   "unpkg": "./dist/typify.min.js",
   "files": [
-    "dist/typify.min.js",
-    "src/Typify.jsx"
+    "dist"
   ],
   "scripts": {
-    "build": "babel src/Typify.jsx -d dist",
-    "prepublishOnly": "npm run build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/devsk18/typify.js.git"
-  },
-  "bugs": {
-    "url": "https://github.com/devsk18/typify.js/issues"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.22.10",
-    "@babel/core": "^7.22.10",
-    "@babel/preset-env": "^7.22.10",
-    "@babel/preset-react": "^7.22.5"
-  },
-  "peerDependencies": {
-    "react": "^16.8.0 || ^17.0.0",
-    "react-dom": "^16.8.0 || ^17.0.0"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "typify",
