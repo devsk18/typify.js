@@ -20,15 +20,15 @@ Installation
 
 To use typify.js directly in the browser, include the following script tag in the `<head>` or `<body>` section of your HTML file:
 
-    <script src="https://unpkg.com/typify.js@1.2.0/dist/typify.min.js"></script>
+    <script src="https://unpkg.com/typify.js@1.0.3/dist/typify.min.js"></script>
 
-
+<!--
 ### Using npm
 
 To use typify.js as an ESModule, install it via npm:
 
     npm install typify.js
-
+-->
 
 ### Download
 
@@ -93,38 +93,25 @@ The following example demonstrates how to use typify.js in browser.
     </body>
     </html>
 
+<!--
+### Using as a ESModule
 
-### Using as a React Component
+The following example demonstrates how to use typify.js as an ESModule.
 
-The following example demonstrates how to use typify.js as an React Component.
+    const Typify = require('typify.js');
+    
+    const typingText = Typify('#typify-text', {
+      text: ['Hello!', 'Welcome to Typify Library!', 'Enjoy the typing effect!'],
+      delay: 100,
+      loop: true,
+      cursor: true,
+      stringDelay: 1000
+    });
 
-    import React from 'react';
-    import Typify from 'typify.js';
-
-    function App() {
-      return (
-        <div className="App">
-          <Typify
-            text={['Hello!', 'Welcome to Typify Library!', 'Enjoy the typing effect!']}
-            stringDelay={1000}
-            loop={true}
-            cursor={true}
-          />
-        </div>
-      );
-    }
-
-export default App;
-
-
-
+-->
 License
 --------
 [MIT](https://github.com/devsk18/typify.js/blob/main/LICENSE)
-
-License
---------
-Kindly report the issues [here](https://github.com/devsk18/typify.js/issues)
 
 Support
 --------
