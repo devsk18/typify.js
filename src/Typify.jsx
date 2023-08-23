@@ -29,11 +29,17 @@ function Typify({ text, delay, stringDelay, loop, cursor }) {
       }
     }
 
+    async function delay(stringDelay) {
+      setTimeout(() => {
+        return;
+      }, stringDelay);
+    }
+
     async function animateTyping() {
       toggleCursor();
 
       await type();
-      await stringDelay;
+      await delay(stringDelay);
       await erase();
 
       if (currentIndex === text.length - 1) {
