@@ -1,20 +1,17 @@
 {
   "name": "typify.js",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "typify.js is a lightweight utility function that creates an auto-typing effect for your text",
   "author": "Sam K Thampan (https://devsk18.github.io/samkthampan)",
   "homepage": "https://devsk18.github.io/typify.js/",
   "license": "MIT",
   "type": "module",
-  
   "main": "./dist/typify.min.js",
   "source": "./src/typify.js",
   "unpkg": "./dist/typify.min.js",
-
   "files": [
     "dist"
   ],
-
   "repository": {
     "type": "git",
     "url": "https://github.com/devsk18/typify.js.git"
