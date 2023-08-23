@@ -5,7 +5,7 @@
   "author": "Sam K Thampan (https://devsk18.github.io/samkthampan)",
   "homepage": "https://devsk18.github.io/typify.js/",
   "license": "MIT",
-  "main": "./dist/typify.min.js",
+  "main": "src/Typify.jsx",
   "module": "src/Typify.jsx",
   "unpkg": "./dist/typify.min.js",
   "files": [
@@ -24,7 +24,7 @@
     "typing animation",
     "typing effect"
   ],
-  "dependencies": {
+  "peerDependencies": {
     "react": "^17.0.2"
   }
 }
