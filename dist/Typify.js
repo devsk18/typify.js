@@ -159,7 +159,7 @@ function Typify(_ref) {
               return type();
             case 3:
               _context5.next = 5;
-              return delay(stringDelay);
+              return stringDelay;
             case 5:
               _context5.next = 7;
               return erase();

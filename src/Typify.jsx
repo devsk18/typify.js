@@ -33,7 +33,7 @@ function Typify({ text, delay, stringDelay, loop, cursor }) {
       toggleCursor();
 
       await type();
-      await delay(stringDelay);
+      await stringDelay;
       await erase();
 
       if (currentIndex === text.length - 1) {
