@@ -146,41 +146,27 @@ function Typify(_ref) {
         });
       }
     }
-    function delay(_x2) {
-      return _delay.apply(this, arguments);
-    }
-    function _delay() {
-      _delay = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(stringDelay) {
-        return _regeneratorRuntime().wrap(function _callee3$(_context5) {
-          while (1) switch (_context5.prev = _context5.next) {
-            case 0:
-              setTimeout(function () {
-                return;
-              }, stringDelay);
-            case 1:
-            case "end":
-              return _context5.stop();
-          }
-        }, _callee3);
-      }));
-      return _delay.apply(this, arguments);
-    }
+    var delay = function delay(ms) {
+      return new Promise(function (resolve) {
+        return setTimeout(resolve, ms);
+      });
+    };
     function animateTyping() {
       return _animateTyping.apply(this, arguments);
     }
     function _animateTyping() {
-      _animateTyping = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4() {
-        return _regeneratorRuntime().wrap(function _callee4$(_context6) {
-          while (1) switch (_context6.prev = _context6.next) {
+      _animateTyping = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
+        return _regeneratorRuntime().wrap(function _callee3$(_context5) {
+          while (1) switch (_context5.prev = _context5.next) {
             case 0:
               toggleCursor();
-              _context6.next = 3;
+              _context5.next = 3;
               return type();
             case 3:
-              _context6.next = 5;
+              _context5.next = 5;
               return delay(stringDelay);
             case 5:
-              _context6.next = 7;
+              _context5.next = 7;
               return erase();
             case 7:
               if (currentIndex === text.length - 1) {
@@ -197,9 +183,9 @@ function Typify(_ref) {
               toggleCursor();
             case 9:
             case "end":
-              return _context6.stop();
+              return _context5.stop();
           }
-        }, _callee4);
+        }, _callee3);
       }));
       return _animateTyping.apply(this, arguments);
     }

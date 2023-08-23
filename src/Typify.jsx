@@ -29,11 +29,9 @@ function Typify({ text, delay, stringDelay, loop, cursor }) {
       }
     }
 
-    async function delay(stringDelay) {
-      setTimeout(() => {
-        return;
-      }, stringDelay);
-    }
+    const delay = ms => new Promise(
+      resolve => setTimeout(resolve, ms)
+    );
 
     async function animateTyping() {
       toggleCursor();
