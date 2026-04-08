@@ -1,4 +1,3 @@
-
 [![](https://devsk18.github.io/typify.js/assets/img/logo.png)](/)
 
 
@@ -20,15 +19,17 @@ Installation
 
 To use typify.js directly in the browser, include the following script tag in the `<head>` or `<body>` section of your HTML file:
 
-    <script src="https://unpkg.com/typify.js@1.1.9/dist/typify.min.js"></script>
+    // jsdelivr (recommended)
+    <script src="https://cdn.jsdelivr.net/npm/typify.js@latest/dist/typify.min.js"></script>
 
-<!--
+    // unpkg
+    <script src="https://unpkg.com/typify.js@latest/dist/typify.min.js"></script>
+
 ### Using npm
 
-To use typify.js as an ESModule, install it via npm:
+To use typify.js as an ES module, install it via npm:
 
     npm install typify.js
--->
 
 ### Download
 
@@ -64,6 +65,8 @@ The **Typify** function accepts the following options as the second argument:
 *   **cursor** (optional): Whether to display the cursor (default: true).
 *   **stringDelay** (optional): Time in milliseconds to pause before typing each string (default: 1000ms).
 
+**Returns**: An object with a stop() method to cancel the typing effect and reset the element to the first string in the text array.
+
 Examples
 --------
 
@@ -80,7 +83,7 @@ The following example demonstrates how to use typify.js in browser.
     </head>
     <body>
       <h1 id="typify-text"></h1>
-      <script src="./typify.min.js"></script>
+      <script src="./typify.min.js"></script> <!-- or use CDN -->
       <script>
         const typingText = Typify('#typify-text', {
           text: ['Hello!', 'Welcome to Typify Library!', 'Enjoy the typing effect!'],
@@ -93,30 +96,84 @@ The following example demonstrates how to use typify.js in browser.
     </body>
     </html>
 
-<!--
-### Using as a React Component
+### Using with npm (ES Module)
 
-The following example demonstrates how to use typify.js as an React Component.
+The following example demonstrates how to use typify.js after installing via npm in a vanilla HTML/JS project.
 
-    import React from 'react';
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Typify Example</title>
+    </head>
+    <body>
+      <h1 id="typify-text"></h1>
+      <script type="module">
+        import Typify from 'typify.js';
+
+        Typify('#typify-text', {
+          text: ['Hello!', 'Welcome to Typify Library!', 'Enjoy the typing effect!'],
+          delay: 100,
+          loop: true,
+          cursor: true,
+          stringDelay: 1000
+        });
+      </script>
+    </body>
+    </html>
+
+### Using in React
+
+The following example demonstrates how to use typify.js in a React project.
+
+    import { useEffect } from 'react';
     import Typify from 'typify.js';
 
     function App() {
-      return (
-        <div className="App">
-          <Typify
-            text={['Hello!', 'Welcome to Typify Library!', 'Enjoy the typing effect!']}
-            stringDelay={1000}
-            loop={true}
-            cursor={true}
-          />
-        </div>
-      );
+      useEffect(() => {
+        const typify = Typify('#typify-text', {
+          text: ['Hello!', 'Welcome to Typify Library!', 'Enjoy the typing effect!'],
+          delay: 100,
+          loop: true,
+          cursor: true,
+          stringDelay: 1000
+        });
+
+        return () => typify.stop();
+      }, []);
+
+      return <h1 id="typify-text"></h1>;
     }
 
-export default App;
--->
+    export default App;
 
+### Using in Vue
+
+The following example demonstrates how to use typify.js in a Vue project.
+
+    <template>
+      <h1 id="typify-text"></h1>
+    </template>
+
+    <script setup>
+    import { onMounted, onUnmounted } from 'vue';
+    import Typify from 'typify.js';
+
+    let typify;
+
+    onMounted(() => {
+      typify = Typify('#typify-text', {
+        text: ['Hello!', 'Welcome to Typify Library!', 'Enjoy the typing effect!'],
+        delay: 100,
+        loop: true,
+        cursor: true,
+        stringDelay: 1000
+      });
+    });
+
+    onUnmounted(() => typify.stop());
+    </script>
 
 License
 --------
