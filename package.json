@@ -6,12 +6,22 @@
   "homepage": "https://devsk18.github.io/typify.js/",
   "license": "MIT",
   "type": "module",
-  "main": "./dist/typify.min.js",
+  "main": "./dist/typify.cjs.cjs",
+  "module": "./dist/typify.esm.js",
+  "exports": {
+    ".": {
+      "import": "./dist/typify.esm.js",
+      "require": "./dist/typify.cjs.cjs"
+    }
+  },
   "source": "./src/typify.js",
   "unpkg": "./dist/typify.min.js",
   "files": [
     "dist"
   ],
+  "scripts": {
+    "build": "rollup -c"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/devsk18/typify.js.git"
@@ -24,5 +34,9 @@
     "typify.js",
     "typing animation",
     "typing effect"
-  ]
+  ],
+  "devDependencies": {
+    "@rollup/plugin-terser": "^1.0.0",
+    "rollup": "^4.60.1"
+  }
 }

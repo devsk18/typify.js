@@ -1,3 +1,5 @@
+'use strict';
+
 /*
 
 MIT License
@@ -109,5 +111,5 @@ function Typify(selector, options) {
     })();
   }
 }
- 
-export default Typify;
+
+module.exports = Typify;
