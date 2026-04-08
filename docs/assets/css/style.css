@@ -46,7 +46,9 @@ h3 {
 }
 
 .nav-links {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 .nav-links a {
