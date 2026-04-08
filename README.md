@@ -1,4 +1,4 @@
-[![](https://devsk18.github.io/typify.js/docs/assets/img/logo.png)](/)
+[![](https://devsk18.github.io/typify.js/assets/img/logo.png)](/)
 
 
 typify.js \- Auto Typing Animation Library
@@ -8,7 +8,7 @@ typify.js \- Auto Typing Animation Library
 
 Demo
 ------------
-[![](https://devsk18.github.io/typify.js/docs/assets/img/demo.gif)](/)
+[![](https://devsk18.github.io/typify.js/assets/img/demo.gif)](/)
 
 Visit this [page](https://devsk18.github.io/typify.js) to see a live demo.
 
