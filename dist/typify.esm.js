@@ -109,5 +109,5 @@ function Typify(selector, options) {
     })();
   }
 }
- 
-export default Typify;
+
+export { Typify as default };
