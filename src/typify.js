@@ -35,11 +35,26 @@ SOFTWARE.
  * @param {boolean} [options.loop=true] - Optional: Whether to loop through the 'text' array continuously or stop after one iteration.
  * @param {boolean} [options.cursor=true] - Optional: Whether to show the cursor during the typing effect.
  * @param {number} [options.stringDelay=1000] - Optional: Time in milliseconds to pause before typing each string.
+ * @returns {{ stop: function }} - An object with a stop() method to cancel the typing effect.
  */
+
+// Track running instances per element
+const _instances = new WeakMap();
 
 function Typify(selector, options) {
   // Select the HTML element where the typing effect will be applied
   const element = document.querySelector(selector);
+
+  // Check if the element exists
+  if (!element) {
+    console.warn(`Typify: no element found for selector "${selector}"`);
+    return { stop: () => {} };
+  }
+
+  // Stop any existing instance for this element
+  if (_instances.has(element)) {
+    _instances.get(element).stop();
+  }
 
   // Default options for the typing effect
   const defaultOptions = {
@@ -54,12 +69,15 @@ function Typify(selector, options) {
   const config = { ...defaultOptions, ...options };
 
   let cursorVisible = true;
+  let stopped = false;
+
   element.textContent = '|'; // Set initial cursor (visible)
 
   // Function to type a single string
   async function type(text) {
     toggleCursor();
     for (const char of text) {
+      if (stopped) return;
       element.textContent = element.textContent.slice(0, -1); // Remove cursor
       element.textContent += char + '|'; // Add new character with cursor
       await delay(config.delay);
@@ -71,6 +89,7 @@ function Typify(selector, options) {
   async function erase() {
     toggleCursor();
     for (let i = element.textContent.length; i >= 0; i--) {
+      if (stopped) return;
       element.textContent = element.textContent.slice(0, -1); // Remove cursor
       element.textContent = element.textContent.slice(0, i) + '|'; // Add cursor during erasing
       await delay(config.delay);
@@ -91,10 +110,23 @@ function Typify(selector, options) {
     }
   }
 
+  // Create and return an instance object with a stop method
+  const instance = {
+    stop: () => {
+      stopped = true;
+      element.textContent = config.text[0] || '';
+      _instances.delete(element);
+    }
+  };
+
+  // Register this instance
+  _instances.set(element, instance);
+
   // Automatically start the typing effect when options are passed and text array is not empty
   if (config.text.length > 0) {
     (async function () {
       while (true) {
+        if (stopped) return;
         for (const text of config.text) {
           await type(text); // Type the string
           await delay(config.stringDelay); // Pause between strings
@@ -108,6 +140,9 @@ function Typify(selector, options) {
       }
     })();
   }
+
+  // Return the instance so users can stop it if needed
+  return instance;
 }
  
 export default Typify;
