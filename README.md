@@ -1,3 +1,6 @@
+[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=devsk18/typify.js@github)](https://gitads.dev/v1/ad-track?source=devsk18/typify.js@github)
+------------
+
 [![](https://devsk18.github.io/typify.js/assets/img/logo.png)](/)
 
 
