@@ -179,10 +179,12 @@ License
 --------
 [MIT](https://github.com/devsk18/typify.js/blob/main/LICENSE)
 
-License
+Issues
 --------
 Kindly report the issues [here](https://github.com/devsk18/typify.js/issues)
 
 Support
 --------
 [Buy me a coffee](https://www.buymeacoffee.com/samkthampan)
+
+<!-- GitAds-Verify: TUTCONOU5A23C3UIOWPJM9RN8R6F46U4 -->
